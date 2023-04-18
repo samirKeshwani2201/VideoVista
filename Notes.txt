@@ -1,3 +1,10 @@
 **17 
 * A function that takes a component and returns a new component
 *Debouncing 
+* The two challenges with the live chat features is :
+ -Get Data live :
+    For this we can have 2 ways :
+        -Web  Sockets(No regular interval) :Is a 2 way connection established ,is like a handshake between server and a UI so that we can quickly send the data from either sides,In a live chat application we require web Sockets as in api polling the order of the data may change and this is not preffered  
+        -Long polling/Api polling() :Its one directional ,data flows from the server to ui
+
+ -Update the UI
