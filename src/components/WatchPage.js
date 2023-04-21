@@ -11,8 +11,6 @@ const WatchPage = () => {
     const dispatch = useDispatch();
 
     const [searchParams] = useSearchParams();
-
-
     useEffect(() => {
         dispatch(closeMenu());
 
@@ -29,7 +27,6 @@ const WatchPage = () => {
                     <LiveChat/>
                 </div>
             </div>
-
             <CommentsContainer />
         </div>
     )
