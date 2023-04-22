@@ -18,7 +18,6 @@ const LiveChat = () => {
             dispatch(addMessage({
                 name: generateRandomName(),
                 message: makeRandomMessage(15),
-
             }))
 
         }, 2000);

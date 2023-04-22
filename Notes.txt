@@ -8,4 +8,6 @@
         -Long polling/Api polling() :Its one directional ,data flows from the server to ui
 
  -Update the UI
- 
+ **18:
+ *useMemo: Takes in first parameter as the function that needs to be memoized useMemo returns a value ,second parameter specify when we have to change it that is dependecies 
+ *useRef:When we dont want to rerender a data in the component like local variables ,after rerender all its values are again initialized and old values are lost so to avoid this we use useRef

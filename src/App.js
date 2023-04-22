@@ -3,6 +3,8 @@ import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Body from './components/Body';
+import Demo from './components/Demo';
+import Demo2 from './components/Demo2';
 import Head from './components/Head';
 import MainContainer from './components/MainContainer';
 import WatchPage from './components/WatchPage';
@@ -21,18 +23,22 @@ const appRouter = createBrowserRouter([
       {
         path: "watch",
         element: <WatchPage />
+      },
+      {
+        path: "Demo",
+        element: <><Demo /><Demo2/> </>,
       }
-    ]
+          ]
   }
-])
+          ])
 
-function App() {
+          function App() {
   return (
-    <Provider store={store}>
-      <div >
-        <Head />
-        <RouterProvider router={appRouter} />
-        {/*  
+          <Provider store={store}>
+            <div >
+              <Head />
+              <RouterProvider router={appRouter} />
+              {/*  
   -Head 
   -Body 
     -Sidebar 
@@ -42,9 +48,9 @@ function App() {
       -VideoContainer
         -VideoCard
  */}
-      </div>
-    </Provider>
-  );
+            </div>
+          </Provider>
+          );
 }
 
-export default App;
+          export default App;
