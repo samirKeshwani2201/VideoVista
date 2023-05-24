@@ -9,7 +9,7 @@ import ChatMessage from './ChatMessage'
 const LiveChat = () => {
 
     const [liveMessage, setLiveMessage] = useState("");
- 
+
     const dispatch = useDispatch();
     const chatMessages = useSelector(store => store.chat.messages);
     useEffect(() => {
@@ -20,7 +20,7 @@ const LiveChat = () => {
                 message: makeRandomMessage(15),
             }))
 
-        }, 2000);
+        }, 2500);
         return () => clearInterval(i);
     }, [])
 
@@ -40,12 +40,11 @@ const LiveChat = () => {
                 }))
                 setLiveMessage("");
 
-            }} className='w-full p-2  m-2 border border-black flex '>
-                <input className='w-95 px-2 ' type="text" value={liveMessage} onChange={(e) => {
+            }} className='w-full p-2  m-2 border border-black flex justify-between'>
+                <input className='w-full px-2 ' type="text" value={liveMessage} onChange={(e) => {
                     setLiveMessage(e.target.value);
 
                 }} />
-
                 <button className='px-2 ml-2 bg-green-100'>Send</button>
 
             </form>

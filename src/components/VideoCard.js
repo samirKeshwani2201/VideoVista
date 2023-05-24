@@ -11,8 +11,7 @@ const VideoCard = ({ info }) => {
             <ul>
                 <li className='py-2 font-bold'>{title}</li>
                 <li>{channelTitle}</li>
-                <li>{statistics.viewCount} views</li>
-
+                { statistics?.viewCount && <li>{statistics?.viewCount} views</li>}
             </ul>
         </div>
     )
@@ -20,7 +19,7 @@ const VideoCard = ({ info }) => {
 export const AdVideoCard = ({ info }) => {
     return (
         <div className='p-1 m-1 border border-red-950'>
-            <VideoCard info={info}/>
+            <VideoCard info={info} />
         </div>
     )
 }

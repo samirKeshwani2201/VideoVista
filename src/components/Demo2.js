@@ -50,7 +50,7 @@ const Demo2 = () => {
 
       <button className='bg-red-900 p-4 m-4 text-white font-bold rounded-lg'
         onClick={() => {
-          clearInterval(i.current);
+          clearInterval(i.current );
         }}
       >Stop Printing</button>
     </div>

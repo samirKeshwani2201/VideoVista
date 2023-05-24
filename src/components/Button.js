@@ -1,6 +1,4 @@
 import React from 'react'
-
-
 const Button = ({name}) => {
     return (
         <div>
@@ -8,5 +6,4 @@ const Button = ({name}) => {
         </div>
     )
 }
-
 export default Button   

@@ -22,7 +22,6 @@ var nameList = [
     'Legacy', 'Sharp', 'Dead', 'Mew', 'Chuckle', 'Bubba', 'Bubble', 'Sandwich', 'Smasher', 'Extreme', 'Multi', 'Universe', 'Ultimate', 'Death', 'Ready', 'Monkey', 'Elevator', 'Wrench', 'Grease', 'Head', 'Theme', 'Grand', 'Cool', 'Kid', 'Boy', 'Girl', 'Vortex', 'Paradox'
 ];
 
-
 export function generateRandomName() {
     return nameList[Math.floor(Math.random() * nameList.length)];
 
@@ -40,6 +39,7 @@ export function makeRandomMessage(length) {
     }
     return result;
 }
+
 export const findPrime = num => {
     let i, primes = [2, 3], n = 5;
     const isPrime = n => {

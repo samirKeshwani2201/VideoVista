@@ -7,13 +7,14 @@ import Demo from './components/Demo';
 import Demo2 from './components/Demo2';
 import Head from './components/Head';
 import MainContainer from './components/MainContainer';
+import VideoListKeyword from './components/VideoListKeyword';
 import WatchPage from './components/WatchPage';
 import store from './utils/store';
 
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <Body />,
+    element: <div> <Head /><Body /></div>,
     children: [
       // This children will be rendered wherever there is Outlet component 
       {
@@ -23,34 +24,39 @@ const appRouter = createBrowserRouter([
       {
         path: "watch",
         element: <WatchPage />
-      },
+      },    
       {
         path: "Demo",
-        element: <><Demo /><Demo2/> </>,
+        element: <><Demo /><Demo2 /> </>,
+      },
+      {
+        path: "list",
+        element: <VideoListKeyword query={'India'} />,
       }
-          ]
+    ]
   }
-          ])
+])
 
-          function App() {
+// 67
+function App() {
+ 
   return (
-          <Provider store={store}>
-            <div >
-              <Head />
-              <RouterProvider router={appRouter} />
-              {/*  
-  -Head 
-  -Body 
-    -Sidebar 
-      -MenuItems
-    -MainContainer
-      -ButtonsList 
-      -VideoContainer
-        -VideoCard
- */}
-            </div>
-          </Provider>
-          );
+    <Provider store={store}>
+      <div >
+        <RouterProvider router={appRouter} />
+      </div>
+    </Provider>
+  );
 }
 
-          export default App;
+export default App;
+//       {/*
+//   -Head 
+//   -Body 
+//     -Sidebar 
+//       -MenuItems
+//     -MainContainer
+//       -ButtonsList 
+//       -VideoContainer
+//         -VideoCard
+//  */}

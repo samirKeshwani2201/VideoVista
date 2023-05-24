@@ -6,12 +6,12 @@ const searchSlice = createSlice({
     reducers: {
         cacheResults: (state, action) => {
             state = Object.assign(state, action.payload);
+            // state here is target 
+            // Object.assign(target, source)
             // state = { ...state,...action.payload }
             // console.log(state);
         },
-    },  
+    },
 });
-
 export const { cacheResults } = searchSlice.actions
-
 export default searchSlice.reducer;
